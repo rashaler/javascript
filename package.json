@@ -1,0 +1,24 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "call-github.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rashaler/javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rashaler/javascript/issues"
+  },
+  "homepage": "https://github.com/rashaler/javascript#readme",
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "request": "^2.88.2",
+    "xhr2": "^0.2.1"
+  }
+}

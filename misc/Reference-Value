@@ -1,0 +1,24 @@
+let a = [1,2,3]
+console.log('a = ' + a)
+a.push(4)
+console.log('a = ' + a)
+
+let c = [1, 2]
+console.log('c = ' + c)
+pushElement(c, 3)
+console.log('c = ' + c)
+
+console.log('a = c' + a == c)
+
+let d = 10;
+let e = '10';
+
+console.log(d == e);
+//output: true
+console.log(d === e);
+//output: false
+
+function pushElement(array, element) {
+    element = element + 2
+    array.push(element)
+}

@@ -1,0 +1,21 @@
+const x = 1;
+const y = 2;
+// (param1, param2, paramN) => expression
+// ES5 regular function
+var add = function(x, y) {
+  return x + y;
+};
+// ES6 arrow function
+let add2 = (x, y) => { return x + y };
+
+// using a default value for a parameter 
+//  if no value is passed for parameter, 
+//   the default value will be used
+let hello = function(name="World") {
+    console.log("Hello " + name +"!");
+}
+hello();
+hello('Mike');
+
+console.log(add(x,y));
+console.log(add2(x,y));

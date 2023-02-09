@@ -1,0 +1,45 @@
+
+
+// Return promise which resolves after specified no. of milliseconds
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// async regular function 
+async function fetchDataFromApi(parm1) {
+    
+    console.log("Parm 1 = " + parm1);
+    const res = await fetch('https://v2.jokeapi.dev/joke/Programming?type=single');
+    const json = await res.json();  
+    console.log(json.joke);
+    await myduration();
+  }
+  
+  async function init() {
+    await fetchDataFromApi("Test 1");
+    console.log('Finished fetching data, named function');
+  }
+
+  async function myduration() {
+    await sleep(4000);
+    console.log('Done waiting...')
+  }
+  
+  init0()
+
+  async function init0() {
+    await init();
+    const arr = [3000, 10000, 20000, 2000];
+    await process(arr);
+    
+    //console.log("wait...");
+    // await myduration();
+  
+  }
+  
+
+// parameter array elements processed in order by sleep time value
+async function process(array) {
+  array.forEach(async (el) => {
+    await sleep(el); // we cannot await promise here
+    console.log('Slept for... ' + el + ' milliseconds');
+  });
+}
